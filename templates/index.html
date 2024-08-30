@@ -27,7 +27,7 @@
             </div>
         </div>
     </header>
-    <form id="myForm" action="#" method="POST" enctype="multipart/form-data">
+    <form id="myForm" action="{% url 'predict' %}" method="POST" enctype="multipart/form-data">
         
         <canvas id="canvas" name="draw" width="400" height="400"></canvas>
         <input type="hidden" id="url" name="url" value="">
