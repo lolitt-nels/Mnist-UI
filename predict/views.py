@@ -15,7 +15,7 @@ def predict(request):
             
             
             # Return the prediction as a JSON response
-            return JsonResponse({'prediction': 'jsp placeholder for now'})
+            return render(request, 'predict.html', {'image_data': image_data})
         except Exception as e:
             
             print("Error:", e)
