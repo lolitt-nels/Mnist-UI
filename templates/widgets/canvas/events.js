@@ -22,10 +22,12 @@ canvas.addEventListener("touchend", () => {
   up();
 });
 
-
 //resize
 window.addEventListener("resize", () => {
   canvas.width = window.innerWidth * 0.92;
+
+  if (canvas.width > 560) canvas.width = 560;
+
   canvas.height = canvas.width;
 
   clearCnv();

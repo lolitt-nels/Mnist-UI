@@ -1,38 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+{% include 'widgets/appbase/appbase.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MLZ MNIST</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'ui_app/home.css' %}">
 
+{% block content_block %}
 
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'ui_app/home.css' %}">
+<div class="section" id="inpt_section">
+    <div class="section_title">
 
-</head>
+        {% include 'widgets/canvas/canvas.html' %}
 
-<body>
-
-    {% include 'widgets/appbase/appbase.html' %}
-
-    {% block content %}
-
-    <div class="section">
-        <div class="section_title">
-            
-            {% include 'widgets/canvas/canvas.html' %}
-
-        </div>
-        <div class="section_content" id="inpt">            
-            <button id="predict">Predict</button>
-            <button id="clear" onclick="clearCnv();">Clear</button>
-        </div>
     </div>
+    <div class="section_content">
+        <button id="predict">Predict</button>
+        <button id="clear" onclick="clearCnv();">Clear</button>
+    </div>
+</div>
 
-    {% endblock %}
-
-
-</body>
-
-</html>
+{% endblock %}
