@@ -17,12 +17,19 @@
     {% include 'widgets/appbase/appbase.html' %}
 
     {% block content %}
-    <canvas id="img"></canvas>
-    <button id="predict">Predict</button>
+
+    <div class="section">
+        <div class="section_content" id="inpt">
+            <canvas id="img"></canvas>
+            <button id="predict">Predict</button>
+        </div>
+    </div>
+
+
+    <script src="{% static 'scripts/canvas.js' %}"></script>
+
+
     {% endblock %}
-
-
-
 
 
 </body>

@@ -1,0 +1,11 @@
+#inpt {
+  gap: var(--sz3);
+}
+
+#img {
+  width: 100%;
+  aspect-ratio: 1;
+
+  background-color: var(--bg0);
+  /*border-radius: var(--sz3);*/
+}
