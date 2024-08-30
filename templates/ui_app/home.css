@@ -2,9 +2,9 @@
   gap: var(--sz3);
 }
 
-#img {
-  width: 100%;
-  aspect-ratio: 1;
+#img {  
+
+  cursor: crosshair;
 
   background-color: var(--bg0);
   /*border-radius: var(--sz3);*/
