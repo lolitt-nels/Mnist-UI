@@ -20,17 +20,15 @@
 
     <div class="section">
         <div class="section_title">
-            <canvas id="img" ></canvas>
+            
+            {% include 'widgets/canvas/canvas.html' %}
+
         </div>
         <div class="section_content" id="inpt">            
             <button id="predict">Predict</button>
-            <button id="clear">Clear</button>
+            <button id="clear" onclick="clearCnv();">Clear</button>
         </div>
     </div>
-
-
-    <script src="{% static 'scripts/canvas.js' %}"></script>
-
 
     {% endblock %}
 
