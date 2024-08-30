@@ -49,13 +49,14 @@
   --bg0: #0f0f0f;
   --bg1: #0a0a0a;
 
+  /*
   --accent0: #ffcf40;
   --accent1: #ffbf00;
-
-  /*
+  */
+  
   --accent0: #7f00ff;
   --accent1: #6009c0;
-  */
+  
 
   --txt0: #ffffff;
   --txt1: #767676;

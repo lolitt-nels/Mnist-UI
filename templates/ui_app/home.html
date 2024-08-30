@@ -8,16 +8,19 @@
 
 
     {% load static %}
-    <link rel="stylesheet" href="{% static 'widgets/theme_dark.css' %}">
     <link rel="stylesheet" href="{% static 'ui_app/home.css' %}">
 
 </head>
 
 <body>
 
+    {% include 'widgets/appbase/appbase.html' %}
 
-    <div id="img"></div>
+    {% block content %}
+    <canvas id="img"></canvas>
     <button id="predict">Predict</button>
+    {% endblock %}
+
 
 
 
