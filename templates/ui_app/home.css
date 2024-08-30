@@ -1,9 +1,8 @@
-#inpt_section{
-  max-width: 560px; /*28x20*/
-}
+
 
 #inpt_section .section_content{
   gap: var(--sz3);
+  max-width: 560px; /*28x20*/
 }
 
 #img {  

@@ -1,15 +1,15 @@
-{% include 'widgets/appbase/appbase.html' %}
+{% extends 'widgets/appbase/appbase.html' %}
 
 {% load static %}
-<link rel="stylesheet" href="{% static 'ui_app/home.css' %}">
 
 {% block content_block %}
 
+
+<link rel="stylesheet" href="{% static 'ui_app/home.css' %}">
+
 <div class="section" id="inpt_section">
     <div class="section_title">
-
         {% include 'widgets/canvas/canvas.html' %}
-
     </div>
     <div class="section_content">
         <button id="predict">Predict</button>
