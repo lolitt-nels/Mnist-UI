@@ -1,0 +1,25 @@
+body {
+  width: 100%;
+  height: 100vh;
+
+  background-color: var(--bg1);
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.section#content_section {
+  
+  padding: 4vw;
+  
+
+  margin: auto;
+
+  overflow: hidden;
+  overflow-y: scroll;
+}

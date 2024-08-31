@@ -1,0 +1,14 @@
+
+
+#inpt_section .section_content{
+  gap: var(--sz3);
+  max-width: 560px; /*28x20*/
+}
+
+#img {  
+
+  cursor: crosshair;
+
+  background-color: var(--bg0);
+  /*border-radius: var(--sz3);*/
+}
