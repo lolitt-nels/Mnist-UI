@@ -1,44 +1,14 @@
 from django.shortcuts import render
 from django.http.response import JsonResponse
 
-from orjson import loads, dumps
-from base64 import b64decode
-from io import BytesIO
-from PIL import Image
+from .network.preprocess import preprocess
 
-import numpy as np
+
 
 
 def home(request):
-    if request.method == "POST":
-        img = loads(request.body).get("img")
-        img = img.split(",")[1]
-
-        # decode the base64
-        img_bytes = b64decode(img)
-
-        # convert the bytes to an img
-        img = Image.open(BytesIO(img_bytes))
-        # img.show()
-
-        # convert to matrix
-        img = np.array(img)
-        #print(img.shape)
-
-        # the shape is A x A x 4
-        # the 4 represents the rgba vals
-        # we need to convert everything to 0's and 1's
-
-        # convert to a binary A x A
-        img = np.where((img == [0, 0, 0, 0]).all(axis=2), 0, 1)
-        #print(img.shape)
-        #print(img)
-        
-        # now we need to convert the A x A to a 28x28
-
-        # convert the 28x28 to a 1x28x28
-
-        
+    if request.method == "POST":        
+        img = preprocess(request.body)                
 
         return JsonResponse({"digit": 9})
 
