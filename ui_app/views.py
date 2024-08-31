@@ -23,17 +23,21 @@ def home(request):
 
         # convert to matrix
         img = np.array(img)
-        print(img.shape)
+        #print(img.shape)
 
         # the shape is A x A x 4
         # the 4 represents the rgba vals
         # we need to convert everything to 0's and 1's
 
-        # convert to A x A
+        # convert to a binary A x A
         img = np.where((img == [0, 0, 0, 0]).all(axis=2), 0, 1)
         #print(img.shape)
+        #print(img)
+        
+        # now we need to convert the A x A to a 28x28
 
-        print(img)
+        # convert the 28x28 to a 1x28x28
+
         
 
         return JsonResponse({"digit": 9})
