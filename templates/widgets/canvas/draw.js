@@ -3,7 +3,7 @@
 function drawLine(x1, y1, x2, y2) {
   //line style
   ctx.strokeStyle = "#ffffff";
-  ctx.lineWidth = canvas.width / 20;
+  ctx.lineWidth = canvas.width / 10;
   ctx.lineCap = "round";
 
   // Draw a quadratic curve
