@@ -1,10 +1,6 @@
-//needs the cookies.js
-
-const CSRF = getCookie("csrftoken")
-
 //needs the post.js
 
-
-function postImage(id){
-    console.log(CSRF)
+function postImage(id) {
+  var digit = post("http://127.0.0.1:8000", {});
+  console.log(digit);
 }
