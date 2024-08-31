@@ -10,6 +10,8 @@ def home(request):
         img = preprocess(request.body)
         prdct = predict_digit(img)
 
-        return JsonResponse({"digit": prdct})
+        print(prdct)
+
+        return JsonResponse({"digit": 9})
 
     return render(request, "ui_app/home.html", {})
