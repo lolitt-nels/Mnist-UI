@@ -4,6 +4,7 @@
 
 {% block content_block %}
 
+{% csrf_token %}
 
 <link rel="stylesheet" href="{% static 'ui_app/home.css' %}">
 
@@ -12,8 +13,15 @@
         {% include 'widgets/canvas/canvas.html' %}
     </div>
     <div class="section_content">
-        <button id="predict">Predict</button>
+        <button id="predict" onclick="predict()">Predict</button>
         <button id="clear" onclick="clearCnv();">Clear</button>
+
+
+        <script src="{% static 'scripts/cookies.js' %}"></script>
+        <script src="{% static 'scripts/post.js' %}"></script>
+        <script src="{% static 'scripts/post_image.js' %}"></script>
+        <script src="{% static 'scripts/predict.js' %}"></script>
+
     </div>
 </div>
 
