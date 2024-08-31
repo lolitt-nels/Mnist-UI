@@ -9,9 +9,7 @@ def home(request):
     if request.method == "POST":
         img = preprocess(request.body)
         prdct = predict_digit(img)
-
-        print(prdct)
-
-        return JsonResponse({"digit": 9})
+        
+        return JsonResponse({"digit": int(prdct)})
 
     return render(request, "ui_app/home.html", {})
