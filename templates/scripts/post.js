@@ -2,8 +2,8 @@
 
 const CSRF = getCookie("csrftoken");
 
-function post(url, body) {
-  fetch(url, {
+async function post(url, body) {
+  return fetch(url, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -11,8 +11,6 @@ function post(url, body) {
     },
     body: JSON.stringify(body),
   }).then((response) => {
-    const rslt = response.json()
-    console.log(rslt)
-    return rslt;
+    return response.json();
   });
 }
