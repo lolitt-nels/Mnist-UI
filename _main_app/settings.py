@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-ux==f9)l!lui%q4*^njh2^w25oi5g-2*1+-e@t!fi3o-8l$b$k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     #
-    "ui_app"
+    "ui_app",
 ]
 
 MIDDLEWARE = [
@@ -56,9 +56,7 @@ ROOT_URLCONF = "_main_app.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [
-            BASE_DIR/"templates"
-        ],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -79,8 +77,8 @@ WSGI_APPLICATION = "_main_app.wsgi.application"
 
 DATABASES = {
     "default": {
-        #"ENGINE": "django.db.backends.sqlite3",
-        #"NAME": BASE_DIR / "db.sqlite3",
+        # "ENGINE": "django.db.backends.sqlite3",
+        # "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -122,9 +120,7 @@ USE_TZ = True
 STATIC_URL = "static/"
 STATIC_ROOT = f"{BASE_DIR}/staticfiles"
 
-STATICFILES_DIRS = (
-    f"{BASE_DIR}/templates",
-)
+STATICFILES_DIRS = (f"{BASE_DIR}/templates",)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
