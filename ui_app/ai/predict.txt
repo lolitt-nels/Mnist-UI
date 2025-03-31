@@ -27,14 +27,7 @@ classifier = load_model(mnistModel, "DigitClassifier_API/weight/modelState.pth",
 if classifier is None:
     print("Model loading failed. Exiting.")
     exit()
-# ai_
-#    |_DigitClassifier_API
-#    |_predict.Py
-#    |_mnistexample.png
 
-# DigitClassifier_API_
-#                     |_data/
-#                     |_weight
 def preprocess_image(image_path, device):
  
     img = Image.open(image_path)
