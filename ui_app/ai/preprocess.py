@@ -15,7 +15,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     # Model, optimizer, and loss initialization
 classifier = load_model(
-        mnistModel, "weight/modelState.pth", device
+        mnistModel, "DigitClassifier/weight/modelState.pth", device
     )  # Load the saved model
 
 def preprocess(request_bytes):
@@ -42,7 +42,7 @@ def preprocess_image(image_path, device):
         transforms.Resize((28, 28)),  # Resize to MNIST image size (if needed)
         transforms.Grayscale(),        # Convert to grayscale (if needed)
         transforms.ToTensor(),
-        transforms.Normalize((0.5,), (0.5,)) # Normalize the image, adjust if necessary
+        #transforms.Normalize((0.5,), (0.5,)) # Normalize the image, adjust if necessary
     ])
     img_tensor = img_transform(img).unsqueeze(0).to(device)  # Add batch dimension
     return img_tensor
