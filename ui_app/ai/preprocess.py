@@ -9,7 +9,7 @@ from torch.utils.data import DataLoader
 import numpy as np
 from torchvision import transforms
 
-from ui_app.ai.MNIST.model import mnistModel
+from ui_app.ai.MNIST_pytorch.model import mnistModel
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 def load_model(model_class, model_path, device):
@@ -29,7 +29,7 @@ def load_model(model_class, model_path, device):
 
 
 # Load the model
-classifier = load_model(mnistModel, "ui_app/ai/MNIST/weight/modelState.pth", device)  
+classifier = load_model(mnistModel, "ui_app/ai/MNIST_pytorch/weight/modelState.pth", device)  
 if classifier is None:
     print("Model loading failed. Exiting.")
     exit()
