@@ -1,3 +1,3 @@
 [submodule "ui_app/ai/MNIST_pytorch"]
 	path = ui_app/ai/MNIST_pytorch
-	url = https://github.com/zaqks/MNIST_pytorch
+	url = https://github.com/lolitt-nels/MNIST
